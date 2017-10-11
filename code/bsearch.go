@@ -10,9 +10,9 @@ func Bsearch(l, r int, a []int, goal int) int {
 		if a[mid] == goal {
 			return mid
 		} else if a[mid] > goal {
-			return bsearch(0, mid-1, a, goal)
+			return Bsearch(0, mid-1, a, goal)
 		} else if a[mid] < goal {
-			return bsearch(mid+1, r, a, goal)
+			return Bsearch(mid+1, r, a, goal)
 		}
 	}
 
