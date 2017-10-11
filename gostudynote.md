@@ -118,3 +118,7 @@ And they're fun to use.
 "new" does not?initialize?the memory, it only?zeros?it.?  
 new(T)?allocates zeroed storage for a new item of type?T?and returns its address  
 "make" creates slices, maps and channels only,and it returns an?initialized?(not?  zeroed) value of type?T?(not?*T).  
+
+##return local variable address in go(effective go)
+it's perfectly OK to return the address of a local variable; the storage associated with the variable survives after the function returns. In fact, taking the address of a composite literal allocates a fresh instance each time it is evaluated
+
