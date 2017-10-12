@@ -77,6 +77,7 @@ Note:?Only the sender should close a channel, never the receiver. Sending on a c
 Another note: Channels aren't like files; you don't usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a?range?loop.
 Don't communicate by sharing memory, share memory by communicating.
 
+而channel，可以理解为：用于并发单元间的数据解耦的、阻塞的、带类型的、并发安全的消息队列。
 
 ##SELECT
 - All channels are evaluated.?
