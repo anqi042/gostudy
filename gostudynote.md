@@ -7,11 +7,16 @@ A nil slice has a (1)length and (2)capacity of 0 and (3)has no underlying array.
 
 ##MAP
 The zero value of a map is?nil. A?nil?map has no keys, nor can keys be added.
-The?make?function returns a map of the given type, initialized and ready for use.
+The **make** function returns a map of the given type, initialized and ready for use.
 ---比如定义一个var m map[string]string  ，m就是nil的，需要make后才能使用
 
-Maps are not safe for concurrent use
+go中的map是hashmap，是一种无序map，linkedmap或者treemap可以实现有序map。
+
+Maps are not safe for **concurrent** use
 https://blog.golang.org/go-maps-in-action
+---需要加mutex
+---golang1.9 sync包中增加新的map类型，支持并发，多个goroutine可以安全并发的调用它。
+
 
 ##RANGE
 When ranging over a slice, two values are returned for each iteration. The first is the index, and the second is a copy of the element at that index.
@@ -121,4 +126,3 @@ new(T)?allocates zeroed storage for a new item of type?T?and returns its address
 
 ##return local variable address in go(effective go)
 it's perfectly OK to return the address of a local variable; the storage associated with the variable survives after the function returns. In fact, taking the address of a composite literal allocates a fresh instance each time it is evaluated
-
