@@ -1,3 +1,19 @@
+##Go's declaration syntax  
+```
+x: int
+p: pointer to int
+a: array[3] of int
+```
+In the interests of brevity it drops the colon and removes some of the keywords  
+
+```   
+x int
+p *int
+a [3]int   
+```
+
+> https://blog.golang.org/gos-declaration-syntax
+
 ##SLICE  
 Slices are like references to arrays
 The length of a slice is the number of elements it contains.
