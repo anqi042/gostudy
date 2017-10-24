@@ -4,7 +4,7 @@ x: int
 p: pointer to int
 a: array[3] of int
 ```
-In the interests of brevity it drops the colon and removes some of the keywords  
+Go's declarations read left to right.In the interests of brevity it drops the colon and removes some of the keywords  
 
 ```   
 x int
